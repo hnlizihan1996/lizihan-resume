@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>李子涵｜AI 短剧编导｜简历</title>
+<!--
+  单文件简历：无外链字体、无 CDN，file:// 直接打开。
+  导出 PDF：Chrome → Ctrl+P → A4 → 缩放 100% → 勾选「背景图形」。
+  所有展开入口均为原生 <details>/<summary>：鼠标点击、Enter、Space 均可开合，无 JS 亦可使用。
+-->
+<style>
+  :root{
+    /* 唯一视觉系统：深海蓝 / 白 / 青绿 */
+    --navy:#1A2332;
+    --paper:#FFFFFF;
+    --accent:#246A6A;
+    --text:#1A2332;
+    --text-2:#526071;
+    --line:#DDE3E8;
+    --line-2:rgba(221,227,232,.62);   /* 分隔线同色降透明度，不引入新色 */
+
+    /* 间距：4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 */
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
+
+    /* 字号：12 / 13 / 14 / 16 / 18 / 20 / 26 / 46 */
+    --fs-12:12px; --fs-13:13px; --fs-14:14px; --fs-16:16px;
+    --fs-18:18px; --fs-20:20px; --fs-26:26px; --fs-46:46px;
+
+    --radius:2px;
+    --ease:cubic-bezier(.2,.6,.3,1);
+    --t:180ms;
+
+    --font:"Noto Sans SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--text);
+    font-family:var(--font);font-size:var(--fs-16);line-height:1.68;font-weight:400;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  p{margin:0}
+  h1,h2,h3,h4{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  b{font-weight:600;color:var(--text)}
+  em{font-style:normal}
+
+  /* =================== 页头 =================== */
+  .hero{
+    position:relative;background:var(--navy);color:#fff;overflow:hidden;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  .hero__inner{
+    position:relative;max-width:1000px;margin:0 auto;
+    min-height:360px;display:flex;align-items:center;
+    padding:var(--s6) var(--s7) var(--s6) 0;
+  }
+  .hero__photo{
+    position:absolute;left:0;top:0;width:53%;height:100%;margin:0;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 9%,#000 20%,#000 72%,rgba(0,0,0,.55) 87%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 9%,#000 20%,#000 72%,rgba(0,0,0,.55) 87%,transparent 100%);
+    animation:heroIn 220ms var(--ease) both;
+  }
+  .hero__photo img{
+    display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;
+    filter:brightness(1.06) saturate(.97) contrast(1.02);
+  }
+  /* 下压 + 右压两层，保证文字永远落在暗部，不压清晰面部 */
+  .hero__fade{
+    position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(90deg,rgba(26,35,50,0) 42%,rgba(26,35,50,.42) 58%,rgba(26,35,50,.86) 72%,var(--navy) 84%),
+      linear-gradient(180deg,rgba(26,35,50,0) 44%,rgba(26,35,50,.42) 72%,rgba(26,35,50,.94) 92%,var(--navy) 100%);
+  }
+  .hero__text{
+    position:relative;z-index:2;width:100%;padding-left:56%;
+    animation:textIn 220ms var(--ease) both;
+  }
+  .hero__eyebrow{
+    font-size:var(--fs-12);letter-spacing:.22em;color:rgba(255,255,255,.52);
+    margin:0 0 var(--s3);font-weight:500;
+  }
+  .hero__name{
+    font-size:var(--fs-46);line-height:1.06;font-weight:700;letter-spacing:.04em;color:#fff;
+  }
+  .hero__rule{display:block;width:40px;height:3px;background:var(--accent);margin:var(--s3) 0}
+  .hero__role{
+    font-size:var(--fs-18);line-height:1.5;font-weight:500;color:rgba(255,255,255,.88);letter-spacing:.03em;
+  }
+  .hero__pitch{
+    margin:var(--s4) 0 0;font-size:var(--fs-14);line-height:1.75;color:rgba(255,255,255,.68);max-width:392px;
+  }
+  .contact{
+    display:flex;flex-wrap:wrap;align-items:center;margin:var(--s5) 0 0;
+    font-size:var(--fs-13);line-height:1.6;color:rgba(255,255,255,.78);
+  }
+  .contact li{display:flex;align-items:center}
+  .contact li+li::before{
+    content:"";width:1px;height:12px;background:rgba(255,255,255,.24);margin:0 var(--s3);display:block;
+  }
+  .contact b{font-weight:600;color:#fff}
+  .hero.no-photo .hero__photo{display:none}
+  .hero.no-photo .hero__text{padding-left:0}
+  .hero.no-photo .hero__inner{padding-left:var(--s7)}
+
+  /* =================== 正文 =================== */
+  .doc{max-width:1000px;margin:0 auto;padding:0 var(--s7) var(--s8)}
+
+  .sec{padding-top:var(--s7)}
+  .sec__head{display:flex;align-items:baseline;gap:var(--s3);border-bottom:1px solid var(--line);padding-bottom:var(--s3)}
+  .sec__title{
+    font-size:var(--fs-26);line-height:1.3;font-weight:700;letter-spacing:.06em;color:var(--navy);
+  }
+  .sec__num{
+    margin-left:auto;font-size:var(--fs-12);letter-spacing:.16em;color:var(--text-2);opacity:.55;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* =================== 01 能力：双线 =================== */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s7);margin-top:var(--s5)}
+  .line__k{
+    display:flex;align-items:center;gap:var(--s3);
+    font-size:var(--fs-20);font-weight:700;color:var(--navy);letter-spacing:.04em;
+    line-height:1.4;padding-bottom:var(--s3);
+  }
+  .line__k::before{content:"";flex:none;width:14px;height:3px;background:var(--accent)}
+
+  .abil{border-top:1px solid var(--line)}
+  .abil__item{padding:var(--s4) 0;border-bottom:1px solid var(--line-2)}
+  .abil__t{font-size:var(--fs-18);font-weight:700;color:var(--navy);line-height:1.4}
+  .abil__d{margin-top:var(--s2);font-size:var(--fs-16);line-height:1.6;color:var(--text-2)}
+
+  /* 证据入口：原生 details/summary，视觉是标签，行为是真按钮 */
+  .ev{margin-top:var(--s1)}
+  .ev__s{
+    display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s2);
+    min-height:44px;padding:var(--s1) 0;
+    list-style:none;cursor:pointer;user-select:none;
+    transition:color var(--t) var(--ease);
+  }
+  .ev__s::-webkit-details-marker{display:none}
+  .ev__k{
+    flex:none;font-size:var(--fs-12);font-weight:600;letter-spacing:.06em;color:var(--accent);
+    border:1px solid rgba(36,106,106,.32);border-radius:var(--radius);padding:4px 8px;
+    transition:background-color var(--t) var(--ease),color var(--t) var(--ease),border-color var(--t) var(--ease);
+  }
+  .ev__v{font-size:var(--fs-14);line-height:1.6;color:var(--text-2);min-width:0}
+  .ev__v::after{
+    content:"";display:inline-block;width:5px;height:5px;margin-left:6px;
+    border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+    transform:rotate(45deg) translateY(-2px);transition:transform var(--t) var(--ease);
+  }
+  .ev[open] .ev__k{background:var(--accent);border-color:var(--accent);color:#fff}
+  .ev[open] .ev__v::after{transform:rotate(-135deg) translateY(-1px)}
+  .ev__b{
+    margin-top:var(--s1);padding:var(--s1) 0 var(--s1) var(--s3);border-left:2px solid var(--accent);
+    font-size:var(--fs-14);line-height:1.7;color:var(--text-2);
+    animation:rise var(--t) var(--ease) both;
+  }
+  .ev__b b{font-weight:600;color:var(--text)}
+
+  /* 工具标签（原生 details，无 JS 可开合） */
+  .chips{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+  .chip{flex:0 0 auto;max-width:100%}
+  .chip[open]{flex:1 1 100%}
+  .chip>summary{
+    display:inline-flex;align-items:center;min-height:32px;padding:var(--s1) var(--s3);
+    font-size:var(--fs-13);line-height:1.4;color:var(--text-2);
+    border:1px solid var(--line);border-radius:var(--radius);background:transparent;
+    cursor:pointer;list-style:none;user-select:none;
+    transition:border-color var(--t) var(--ease),color var(--t) var(--ease),transform var(--t) var(--ease);
+  }
+  .chip>summary::-webkit-details-marker{display:none}
+  .chip>summary::after{
+    content:"";width:4px;height:4px;margin-left:6px;border-right:1px solid currentColor;
+    border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-1px);
+    transition:transform var(--t) var(--ease);
+  }
+  .chip[open]>summary{border-color:var(--accent);color:var(--accent)}
+  .chip[open]>summary::after{transform:rotate(-135deg) translateY(-1px)}
+  .chip__b{
+    margin-top:var(--s2);padding:var(--s1) 0 var(--s1) var(--s3);border-left:2px solid var(--accent);
+    font-size:var(--fs-13);line-height:1.7;color:var(--text-2);
+    animation:rise var(--t) var(--ease) both;
+  }
+  .chip__b b{font-weight:600;color:var(--text)}
+
+  /* 双栏排布下两栏标签区等高收尾，避免一侧孤行拉出参差 */
+  @media screen and (min-width:821px){
+    .chips{min-height:72px;align-content:flex-start}
+  }
+
+  /* =================== 02 经历 =================== */
+  .job{
+    display:grid;grid-template-columns:124px 1fr;gap:var(--s1) var(--s5);
+    padding:var(--s5) 0;border-bottom:1px solid var(--line-2);
+  }
+  .job:last-child{border-bottom:0}
+  .job__when{
+    font-size:var(--fs-13);line-height:1.6;color:var(--text-2);letter-spacing:.02em;
+    font-variant-numeric:tabular-nums;padding-top:4px;
+  }
+  .job__role{font-size:var(--fs-18);font-weight:700;color:var(--navy);line-height:1.4}
+  .job__co{margin-top:var(--s1);font-size:var(--fs-14);line-height:1.6;color:var(--accent);font-weight:500}
+  .job__sum{margin-top:var(--s3)}
+  .job__sum li{
+    position:relative;padding-left:16px;font-size:var(--fs-16);line-height:1.65;color:var(--text-2);
+  }
+  .job__sum li+li{margin-top:var(--s1)}
+  .job__sum li::before{
+    content:"";position:absolute;left:1px;top:.72em;width:4px;height:4px;border-radius:50%;
+    background:var(--accent);opacity:.6;
+  }
+  .job__sum em{color:var(--text);font-weight:600}
+
+  .more{margin-top:var(--s1)}
+  .more>summary{
+    display:inline-flex;align-items:center;gap:var(--s2);
+    min-height:44px;padding:0;
+    font-size:var(--fs-14);line-height:1.6;font-weight:600;color:var(--accent);
+    cursor:pointer;list-style:none;letter-spacing:.02em;
+    transition:color var(--t) var(--ease);
+  }
+  .more>summary::-webkit-details-marker{display:none}
+  .more>summary::after{
+    content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+    transform:rotate(45deg) translateY(-1px);transition:transform var(--t) var(--ease);
+  }
+  .more[open]>summary::after{transform:rotate(-135deg) translateY(-1px)}
+  .more__b{
+    margin-top:0;padding-left:var(--s3);border-left:1px solid var(--line);
+    font-size:var(--fs-14);line-height:1.7;color:var(--text-2);animation:rise var(--t) var(--ease) both;
+  }
+  .more__b p+p{margin-top:var(--s2)}
+  .more__b b{color:var(--text)}
+
+  .early .job{padding:var(--s3) 0;grid-template-columns:124px 1fr}
+  .early .job__role{font-size:var(--fs-16);font-weight:600;color:var(--text)}
+  .early .job__co{font-size:var(--fs-13);color:var(--text-2);margin-top:0}
+
+  .edu{
+    display:grid;grid-template-columns:124px 1fr;gap:var(--s5);
+    padding-top:var(--s4);border-top:1px solid var(--line);margin-top:var(--s4);
+  }
+  .edu__k{font-size:var(--fs-13);color:var(--text-2);letter-spacing:.04em;padding-top:4px}
+  .edu__v{font-size:var(--fs-16);line-height:1.6;color:var(--text)}
+  .edu__v span{color:var(--text-2)}
+
+  /* =================== 03 成果 =================== */
+  .res{
+    display:grid;grid-template-columns:150px 1fr;gap:var(--s2) var(--s5);
+    padding:var(--s4) 0;border-bottom:1px solid var(--line-2);
+  }
+  .res:last-child{border-bottom:0}
+  .res__k{font-size:var(--fs-13);line-height:1.6;color:var(--text-2);padding-top:4px;letter-spacing:.02em}
+  .res__v{font-size:var(--fs-16);line-height:1.7;color:var(--text)}
+  .res__v b{font-weight:700;color:var(--navy)}
+  .res__v .score{font-size:var(--fs-18);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+  .res__note{display:block;margin-top:4px;font-size:var(--fs-13);line-height:1.6;color:var(--text-2)}
+
+  /* =================== 04 期望 =================== */
+  .want{display:grid;grid-template-columns:repeat(3,1fr);gap:0 var(--s6);margin-top:var(--s5)}
+  .want__item{padding:var(--s4) 0 var(--s4) var(--s4);border-left:2px solid var(--line)}
+  .want__item:first-child{border-left-color:var(--accent)}
+  .want__k{font-size:var(--fs-12);letter-spacing:.14em;color:var(--text-2)}
+  .want__v{margin-top:var(--s2);font-size:var(--fs-18);line-height:1.45;font-weight:700;color:var(--navy)}
+  .want__v small{display:block;margin-top:var(--s1);font-size:var(--fs-13);font-weight:400;color:var(--text-2);line-height:1.6}
+
+  /* =================== 状态与动效 =================== */
+  @keyframes heroIn{from{opacity:0}to{opacity:1}}
+  @keyframes textIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes rise{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+  summary:focus-visible{
+    outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--radius);
+  }
+  .ev__s:focus-visible{outline-offset:1px}
+
+  @media (hover:hover){
+    .chip>summary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+    .more>summary:hover{color:#1B5252}
+    .ev__s:hover .ev__v{color:var(--text)}
+  }
+
+  /* 触控：主入口与标签均 ≥44px */
+  @media (pointer:coarse){
+    .chip>summary{min-height:44px;padding:var(--s2) var(--s3)}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
+  }
+
+  /* =================== 平板：保持头像侧向渐隐 =================== */
+  @media screen and (max-width:820px){
+    .hero__inner{min-height:340px;padding:var(--s5) var(--s5) var(--s5) 0}
+    .hero__photo{width:52%}
+    .hero__text{padding-left:53%}
+    .hero__name{font-size:38px}
+    .hero__role{font-size:var(--fs-16)}
+    .hero__pitch{font-size:var(--fs-13);max-width:330px}
+    .hero__eyebrow{font-size:11px}
+    .contact{font-size:var(--fs-12);margin-top:var(--s4)}
+    .contact li+li::before{margin:0 var(--s2)}
+    .doc{padding:0 var(--s5) var(--s7)}
+    .sec{padding-top:var(--s6)}
+    .sec__title{font-size:22px}
+    .duo{grid-template-columns:1fr;gap:0}
+    .line+.line{margin-top:var(--s6)}
+    .job,.edu{grid-template-columns:104px 1fr;gap:var(--s1) var(--s4)}
+    .job__when{padding-top:4px}
+    .chip>summary{min-height:44px;padding:var(--s2) var(--s3)}
+  }
+
+  /* =================== 手机：照片上、文字下，仍大幅不裁脸 =================== */
+  @media screen and (max-width:640px){
+    .hero__inner{display:block;min-height:0;padding:0 var(--s5) var(--s4)}
+    .hero__photo{
+      position:relative;width:calc(100% + 2 * var(--s5));margin:0 calc(-1 * var(--s5));
+      height:clamp(260px,74vw,320px);
+      -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.55) 84%,transparent 100%);
+      mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.55) 84%,transparent 100%);
+    }
+    .hero__photo img{object-position:50% 20%}
+    .hero__fade{background:linear-gradient(180deg,rgba(26,35,50,0) 48%,rgba(26,35,50,.45) 72%,rgba(26,35,50,.92) 92%,var(--navy) 100%)}
+    .hero__text{padding-left:0;margin-top:calc(-1 * var(--s6))}
+    .hero__name{font-size:34px}
+    .hero__pitch{max-width:none;font-size:var(--fs-13)}
+    .contact{margin-top:var(--s4)}
+    .doc{padding:0 20px var(--s7)}
+    .sec{padding-top:var(--s6)}
+    .sec__title{font-size:22px}
+    .job,.edu,.res{grid-template-columns:1fr;gap:var(--s1)}
+    .res{padding:var(--s4) 0;gap:var(--s1)}
+    .res__k{padding-top:0}
+    .want{grid-template-columns:1fr;gap:0}
+    .want__item{padding:var(--s3) 0 var(--s3) var(--s4)}
+    .want__item+.want__item{border-top:1px solid var(--line-2)}
+    .abil__d{font-size:var(--fs-16)}
+    .ev__v{font-size:var(--fs-14)}
+    .chip>summary{min-height:44px;padding:var(--s2) var(--s3)}
+  }
+
+  /* =================== 页面内编辑 =================== */
+  /* 入口：浏览态唯一可见的控件，不参与打印 */
+  #editEntry{
+    position:fixed;right:var(--s4);bottom:var(--s4);z-index:60;
+    display:inline-flex;align-items:center;gap:var(--s2);
+    min-height:44px;padding:0 var(--s4);
+    font-family:var(--font);font-size:var(--fs-13);font-weight:600;letter-spacing:.04em;
+    color:var(--navy);background:var(--paper);
+    border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:0 2px 12px rgba(26,35,50,.14);
+    cursor:pointer;
+    transition:color var(--t) var(--ease),border-color var(--t) var(--ease),transform var(--t) var(--ease),box-shadow var(--t) var(--ease);
+  }
+  #editEntry svg{width:14px;height:14px;display:block;flex:none}
+  #editEntry:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,35,50,.18)}
+  #editEntry:active{transform:translateY(0)}
+  #editEntry:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  body.editing #editEntry{display:none}
+
+  /* 工具栏：文档流内 sticky，不遮挡内容 */
+  .editbar{display:none}
+  body.editing .editbar{
+    display:block;position:sticky;top:0;z-index:55;
+    background:var(--navy);color:#fff;
+    box-shadow:0 1px 0 rgba(221,227,232,.2);
+  }
+  .editbar__in{
+    max-width:1000px;margin:0 auto;padding:var(--s2) var(--s7);
+    display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);
+  }
+  .editbar__t{font-size:var(--fs-12);font-weight:600;letter-spacing:.18em;color:rgba(255,255,255,.56)}
+  .ebtn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:44px;padding:0 var(--s4);
+    font-family:var(--font);font-size:var(--fs-13);font-weight:600;letter-spacing:.02em;
+    color:rgba(255,255,255,.92);background:transparent;
+    border:1px solid rgba(255,255,255,.26);border-radius:var(--radius);
+    cursor:pointer;
+    transition:background-color var(--t) var(--ease),border-color var(--t) var(--ease),transform var(--t) var(--ease),box-shadow var(--t) var(--ease);
+  }
+  .ebtn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.46)}
+  .ebtn:active{transform:translateY(1px)}
+  .ebtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .ebtn--primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .ebtn--primary:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-1px);box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .ebtn--ghost{border-color:transparent;padding:0 var(--s3);color:rgba(255,255,255,.7)}
+  .ebtn--ghost:hover{background:rgba(255,255,255,.08);color:#fff}
+  .editbar__s{
+    margin-left:auto;display:flex;align-items:center;min-height:20px;
+    font-size:var(--fs-12);letter-spacing:.02em;color:rgba(255,255,255,.6);
+  }
+
+  /* 可编辑态提示：虚线 = 可改，实线 = 正在改 */
+  body.editing [contenteditable]{
+    outline:1px dashed rgba(36,106,106,.5);outline-offset:3px;border-radius:var(--radius);
+    transition:outline-color var(--t) var(--ease),background-color var(--t) var(--ease);
+  }
+  body.editing [contenteditable]:hover{outline-color:rgba(36,106,106,.85)}
+  body.editing [contenteditable]:focus{outline:2px solid var(--accent);outline-offset:3px;background:rgba(36,106,106,.05)}
+  body.editing .hero [contenteditable]{outline-color:rgba(255,255,255,.38)}
+  body.editing .hero [contenteditable]:hover{outline-color:rgba(255,255,255,.72)}
+  body.editing .hero [contenteditable]:focus{outline:2px solid rgba(255,255,255,.9);background:rgba(255,255,255,.09)}
+
+  /* 排序控件 */
+  .edit-ops{display:none}
+  body.editing .edit-ops{
+    display:flex;align-items:center;gap:var(--s2);grid-column:1 / -1;
+    margin-top:var(--s2);padding-top:var(--s1);
+  }
+  .ehandle{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;flex:none;cursor:grab;
+    color:var(--text-2);background:var(--paper);
+    border:1px solid var(--line);border-radius:var(--radius);
+    transition:border-color var(--t) var(--ease),color var(--t) var(--ease);
+  }
+  .ehandle:hover{border-color:var(--accent);color:var(--accent)}
+  .ehandle:active{cursor:grabbing}
+  .ehandle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ehandle svg{width:14px;height:14px;display:block}
+  .eop{
+    min-height:44px;padding:0 var(--s3);
+    font-family:var(--font);font-size:var(--fs-12);font-weight:600;letter-spacing:.04em;
+    color:var(--text-2);background:var(--paper);
+    border:1px solid var(--line);border-radius:var(--radius);cursor:pointer;
+    transition:border-color var(--t) var(--ease),color var(--t) var(--ease),transform var(--t) var(--ease);
+  }
+  .eop:hover{border-color:var(--accent);color:var(--accent)}
+  .eop:active{transform:translateY(1px)}
+  .eop:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .eop[disabled]{opacity:.4;cursor:not-allowed}
+  .eop[disabled]:hover{border-color:var(--line);color:var(--text-2)}
+
+  /* 编辑态的详情开合按钮：保证 details 仍可操作 */
+  .edit-toggle{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;margin-left:var(--s2);flex:none;
+    color:var(--text-2);background:var(--paper);
+    border:1px solid var(--line);border-radius:var(--radius);cursor:pointer;
+    transition:border-color var(--t) var(--ease),color var(--t) var(--ease);
+  }
+  .edit-toggle:hover{border-color:var(--accent);color:var(--accent)}
+  .edit-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .edit-toggle svg{width:12px;height:12px;display:block;transition:transform var(--t) var(--ease)}
+  details[open]>.edit-toggle svg,
+  details[open] summary .edit-toggle svg{transform:rotate(180deg)}
+
+  /* 拖拽反馈：轻量、只有一条强调线 */
+  body.editing .drag-src{opacity:.42}
+  body.editing .drop-before{box-shadow:inset 0 2px 0 var(--accent)}
+  body.editing .drop-after{box-shadow:inset 0 -2px 0 var(--accent)}
+  body.editing .drop-bad{box-shadow:inset 0 0 0 2px rgba(26,35,50,.32)}
+
+  /* 提示条 */
+  .edit-toast{
+    position:fixed;left:50%;bottom:var(--s6);z-index:70;
+    max-width:min(92vw,560px);padding:var(--s3) var(--s4);
+    font-size:var(--fs-13);line-height:1.6;color:#fff;background:var(--navy);
+    border-radius:var(--radius);box-shadow:0 8px 24px rgba(26,35,50,.26);
+    opacity:0;pointer-events:none;transform:translateX(-50%) translateY(8px);
+    transition:opacity var(--t) var(--ease),transform var(--t) var(--ease);
+  }
+  .edit-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media screen and (max-width:820px){
+    .editbar__in{padding:var(--s2) var(--s5)}
+    .ebtn{padding:0 var(--s3);font-size:var(--fs-12)}
+  }
+  @media screen and (max-width:640px){
+    .editbar__in{padding:var(--s2) 20px;gap:var(--s2)}
+    .editbar__t{width:100%}
+    .ebtn{flex:1 1 auto;padding:0 var(--s2);min-width:72px}
+    .editbar__s{width:100%;margin-left:0}
+    #editEntry{right:20px;bottom:20px}
+  }
+
+  /* 打印续页页眉（屏幕不显示） */
+  .print-head{display:none}
+
+  /* =================== 打印 A4 =================== */
+  @media print{
+    @page{size:A4;margin:11mm 13mm}
+    html,body{background:#fff;font-size:10.6pt;line-height:1.5}
+    body{color:#1A2332}
+    .hero,.hero__photo,.hero__fade{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .hero__photo{
+      animation:none;width:32%;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.6) 8%,#000 18%,#000 74%,rgba(0,0,0,.6) 88%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.6) 8%,#000 18%,#000 74%,rgba(0,0,0,.6) 88%,transparent 100%);
+    }
+    .hero__photo img{object-position:50% 2%}
+    .hero__inner{min-height:40mm;padding:4mm 6mm 4mm 0;max-width:none}
+    .hero__text{padding-left:36%;animation:none;margin-top:0}
+    .hero__eyebrow{font-size:8.6pt;margin-bottom:1.2mm;letter-spacing:.18em}
+    .hero__name{font-size:24pt}
+    .hero__rule{width:26px;height:2px;margin:1.8mm 0}
+    .hero__role{font-size:11pt}
+    .hero__pitch{font-size:10.5pt;line-height:1.5;margin-top:1.6mm;max-width:92mm}
+    .contact{font-size:9.8pt;margin-top:2mm}
+    .contact li+li::before{margin:0 2.2mm}
+
+    .doc{max-width:none;padding:0}
+    .sec{padding-top:3.2mm}
+    .sec__head{padding-bottom:1.1mm}
+    .sec__title{font-size:14.4pt}
+    .sec__num{font-size:8.4pt}
+
+    .duo{margin-top:2.4mm;gap:0 7mm}
+    .line__k{font-size:11.6pt;padding-bottom:1mm}
+    .line__k::before{width:10px;height:2px}
+    .abil__item{padding:1.6mm 0}
+    .abil__t{font-size:11.2pt}
+    .abil__d{margin-top:.6mm;font-size:10.5pt;line-height:1.5}
+    .ev{margin-top:0}
+    .ev__s{min-height:0;padding:.5mm 0;cursor:auto;gap:0 1.6mm}
+    .ev__k{font-size:8pt;padding:0 1mm;border-color:#246A6A}
+    .ev__v{font-size:10.2pt;line-height:1.45}
+    .ev__v::after{display:none}
+    .ev__b{display:none !important}
+    .chips{margin-top:1.2mm;gap:3px}
+    .chip>summary{min-height:0;padding:.3mm 1.2mm;font-size:9.4pt}
+    .chip>summary::after{display:none}
+    .chip__b{display:none !important}
+
+    .job{padding:1.7mm 0;grid-template-columns:24mm 1fr;gap:.5mm 4.2mm}
+    .job__when{font-size:8.8pt;padding-top:.6mm}
+    .job__role{font-size:11.2pt}
+    .job__co{font-size:9.8pt;margin-top:.2mm}
+    .job__sum{margin-top:1mm}
+    .job__sum li{font-size:10.5pt;line-height:1.5;padding-left:3mm}
+    .job__sum li+li{margin-top:.3mm}
+    .more{margin-top:0}
+    .more{margin-top:.3mm}
+    .more>summary{display:inline-flex;min-height:0;padding:0;font-size:9.4pt;color:#526071;font-weight:600;letter-spacing:0}
+    .more>summary::after{display:none}
+    .more__act{display:none}
+    .more__b{display:block;font-size:10.5pt;line-height:1.5;margin-top:.3mm;padding-left:2.2mm}
+    .more__b p+p{margin-top:.4mm}
+    /* 分页策略：第 1 页收在第三条主要经历，第 2 页自早期岗位起，
+       避免整段经历被顶到次页、也避免把三个早期岗位拆成两半 */
+    .early{break-inside:avoid;page-break-inside:avoid}
+    /* 10.5pt 正文下第 1 页只能容纳到「AI 内容创作」，第 2 页自「编导 + 助播」起，
+       由续页页眉承担确定性分页（Chrome 对 grid 版 job 的断页估算不可靠，不依赖自然断页） */
+    .print-head{
+      display:flex;align-items:baseline;justify-content:space-between;
+      break-before:page;page-break-before:always;
+      padding-bottom:1.2mm;margin-bottom:2.4mm;border-bottom:.4pt solid #DDE3E8;
+      font-size:8.6pt;color:#526071;letter-spacing:.06em;
+    }
+    .print-head b{font-size:10pt;color:#1A2332;letter-spacing:.08em}
+    .print-head .ph-r{font-weight:400}
+    .early .job{padding:1.3mm 0}
+    .early .job__role{font-size:10.8pt}
+    .early .job__co{font-size:9.4pt}
+    .edu{padding-top:1.8mm;grid-template-columns:24mm 1fr;gap:4.2mm;margin-top:1.4mm}
+    .edu__k{font-size:8.8pt}
+    .edu__v{font-size:10.5pt}
+
+    .res{padding:1.3mm 0;grid-template-columns:27mm 1fr;gap:.5mm 4.2mm}
+    .res__k{font-size:9pt;padding-top:.6mm}
+    .res__v{font-size:10.5pt;line-height:1.5}
+    .res__v .score{font-size:11.4pt}
+    .res__note{font-size:8.8pt;margin-top:.2mm}
+    .nb{white-space:nowrap}
+    .want{margin-top:1.8mm;gap:0 5.6mm}
+    .want__item{padding:1.6mm 0 1.6mm 2.6mm}
+    .want__k{font-size:8.4pt}
+    .want__v{font-size:11.4pt;margin-top:.4mm}
+    .want__v small{font-size:9pt}
+
+    /* 编辑控件一律不进纸面 */
+    #editEntry,.editbar,.edit-ops,.edit-toggle,.edit-toast{display:none !important}
+    [contenteditable]{outline:none !important;background:none !important}
+
+    /* 分页：不切断条目，不留孤立标题 */
+    .sec__head,.job__role,.job__co,.job__when,.line__k,.abil__t{break-after:avoid;page-break-after:avoid}
+    .abil__item,.job,.res,.want__item,.line,.edu,.more,.chip{break-inside:avoid;page-break-inside:avoid}
+    .hero{break-inside:avoid;page-break-inside:avoid}
+    .sec{break-before:auto;page-break-before:auto}
+    p,li{orphans:3;widows:3}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="editbar" id="editbar" role="toolbar" aria-label="简历编辑工具">
+  <div class="editbar__in">
+    <span class="editbar__t">编辑模式</span>
+    <button class="ebtn ebtn--primary" id="btnSave" type="button">保存</button>
+    <button class="ebtn" id="btnDone" type="button">完成</button>
+    <button class="ebtn" id="btnCancel" type="button">取消</button>
+    <button class="ebtn ebtn--ghost" id="btnReset" type="button">恢复默认布局</button>
+    <button class="ebtn ebtn--ghost" id="btnClearDraft" type="button">清除草稿</button>
+    <span class="editbar__s" id="editStatus" aria-live="polite"></span>
+  </div>
+</div>
+
+<button id="editEntry" type="button" aria-haspopup="dialog" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+  <span>编辑内容</span>
+</button>
+
+<div class="edit-toast" id="editToast" role="status" aria-live="polite"></div>
+
+<header class="hero">
+  <div class="hero__inner">
+    <figure class="hero__photo"><img alt="李子涵" src="avatar.jpg" width="939" height="940"><span class="hero__fade"></span></figure>
+    <div class="hero__text">
+      <p class="hero__eyebrow">RESUME / 2026</p>
+      <h1 class="hero__name">李子涵</h1>
+      <span class="hero__rule" aria-hidden="true"></span>
+      <p class="hero__role">AI 短剧编导 / 短视频内容制作</p>
+      <p class="hero__pitch">8 年内容一线：摄像、剪辑、编导、账号操盘；近 3 年 AI 短剧链路一人跑通。</p>
+      <ul class="contact">
+        <li><b>13728972568</b></li>
+        <li>深圳</li>
+        <li>8 年经验</li>
+        <li>期望 <b>12–15K</b></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+  <!-- ============ 01 我的能力 ============ -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">我的能力</h2><span class="sec__num">01</span></div>
+
+    <div class="duo">
+
+      <div class="line">
+        <h3 class="line__k">短视频</h3>
+        <ul class="abil">
+          <li class="abil__item">
+            <h4 class="abil__t">IP 与商业内容策划</h4>
+            <p class="abil__d">定位、选题、文案分层，按目标反推。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">10+ 个人 IP：广州张律师、九宫艾·杨总</span></summary>
+              <div class="ev__b"><p>客户覆盖律师、教培、金融理财、大健康、机器人；交付定位、选题框架、选题库与文案库分层，配钩子与结尾变体。</p></div>
+            </details>
+          </li>
+          <li class="abil__item">
+            <h4 class="abil__t">拍摄剪辑与赛事内容</h4>
+            <p class="abil__d">脚本到成片一人交付。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">2 场台球赛事宣发；老板 IP 稳定周更</span></summary>
+              <div class="ev__b"><p>赛事宣发负责脚本、拍摄与成片；老板 IP 账号长期拍摄剪辑、稳定周更；另交付活动片与抖店产品视频。</p></div>
+            </details>
+          </li>
+          <li class="abil__item">
+            <h4 class="abil__t">企业矩阵与线索承接</h4>
+            <p class="abil__d">卖点、背书、私信话术、客资交接。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">10+ 家企业；单账号单月新增获客 500+</span></summary>
+              <div class="ev__b"><p>大族激光、瑞驰汽车、AITO 鸿蒙智行、同福集团、圳动体育、孝当先等企业账号；卖点与背书口径、私信话术、客资交接全链路。500+ 为单账号单月新增咨询口径。</p></div>
+            </details>
+          </li>
+        </ul>
+        <div class="chips">
+          <details class="chip"><summary>PR · AE · 达芬奇</summary><div class="chip__b">PR 剪主线，AE 做包装动效，达芬奇调色出片，长片与宣传片走这套。</div></details>
+          <details class="chip"><summary>剪映 · 混剪 · 数字人</summary><div class="chip__b">批量混剪与数字人口播，承接矩阵账号的日更产能。</div></details>
+          <details class="chip"><summary>选题库 · 文案库</summary><div class="chip__b">按人群、场景、卖点分层的可复用选题与文案，配钩子与结尾变体，换项目只替换设定层。</div></details>
+          <details class="chip"><summary>1+N+K 矩阵</summary><div class="chip__b">矩阵账号的分工与排期口径，落在《矩阵流量打法 SOP V2》里，已在 10+ 家企业账号执行。</div></details>
+        </div>
+      </div>
+
+      <div class="line">
+        <h3 class="line__k">AI</h3>
+        <ul class="abil">
+          <li class="abil__item">
+            <h4 class="abil__t">AI 内容工作流</h4>
+            <p class="abil__d">文本、图像、视频到剪辑一条线。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">短剧样片制作与探索中，未商业交付</span></summary>
+              <div class="ev__b"><p>即梦出镜头，WorkBuddy 串选题、脚本、分镜与提示词，Codex 做批处理与小工具，Obsidian 归档素材与 SOP。短剧样片仍在制作与探索中，未商业交付。</p></div>
+            </details>
+          </li>
+          <li class="abil__item">
+            <h4 class="abil__t">SOP / skills / 知识库沉淀</h4>
+            <p class="abil__d">提示词与交付标准沉淀为模板。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">《矩阵流量打法 SOP V2》《流量打法归档》V1.0</span></summary>
+              <div class="ev__b"><p>六步产线、4 张岗位卡、1+N+K 矩阵体系、每日清单与复盘表，随项目复用；新项目只换设定层，不重搭流程。</p></div>
+            </details>
+          </li>
+          <li class="abil__item">
+            <h4 class="abil__t">课程设计与教学</h4>
+            <p class="abil__d">课表、讲义、实操，面向零基础。</p>
+            <details class="ev">
+              <summary class="ev__s"><span class="ev__k">代表证据</span><span class="ev__v">学员 400+，四类课程形态</span></summary>
+              <div class="ev__b"><p>参与四类课程的开发与交付：从课表、讲义到实操环节，面向零基础学员，累计学员 400+ 人。</p></div>
+            </details>
+          </li>
+        </ul>
+        <div class="chips">
+          <details class="chip"><summary>即梦</summary><div class="chip__b">图生视频主力工具，负责镜头生成与角色一致性。</div></details>
+          <details class="chip"><summary>WorkBuddy</summary><div class="chip__b">把选题、脚本、分镜、提示词串成可复用的技能与流水线。</div></details>
+          <details class="chip"><summary>Codex</summary><div class="chip__b">脚本批处理，以及页面、小工具类需求的自建实现。</div></details>
+          <details class="chip"><summary>Obsidian · 知识库</summary><div class="chip__b">项目素材、SOP、提示词按项目归档，随取随用。</div></details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 02 我的经历 ============ -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">我的经历</h2><span class="sec__num">02</span></div>
+
+    <div class="job">
+      <p class="job__when">2023.3 — 2026</p>
+      <div class="job__main">
+        <h3 class="job__role">AI 内容创作 · 短视频操盘</h3>
+        <p class="job__co">深圳埃元数字科技有限公司（创业）</p>
+        <ul class="job__sum">
+          <li><em>个人 IP 全案代运营</em>　广州张律师、九宫艾·杨总等 10+ 项目（律师/教培/理财/大健康/<span class="nb">机器人</span>）。</li>
+          <li><em>企业短视频矩阵</em>　大族激光、瑞驰汽车、AITO 鸿蒙智行、同福集团、圳动体育、孝当先等 10+ 项目。</li>
+          <li><em>AI 教学与产线</em>　四类课程参与开发交付；六步产线、4 张岗位卡。</li>
+        </ul>
+        <details class="more" data-print-open>
+          <summary><span class="more__act">查看</span>项目与产线详情</summary>
+          <div class="more__b">
+            <p><b>项目范围</b>　企业侧跨激光装备（大族激光）、汽车（瑞驰、AITO 鸿蒙智行）、食品（同福集团）、体育连锁（圳动体育）、大健康（孝当先、九宫艾）；个人 IP 侧含律师、教培、金融理财、机器人。负责定位、选题框架、选题库与文案库分层产出，以及矩阵文案、混剪脚本与客资交接。</p>
+            <p><b>产线版本</b>　2024 年矩阵流程雏形 → 2026 年《矩阵流量打法 SOP V2》与《流量打法归档》V1.0；含每日清单与复盘表、1+N+K 矩阵体系。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="print-head" aria-hidden="true"><b>李子涵</b><span class="ph-r">AI 短剧编导 / 短视频内容制作 · 续</span></div>
+
+    <div class="job">
+      <p class="job__when">2022.10 — 2022.12</p>
+      <div class="job__main">
+        <h3 class="job__role">编导 + 助播</h3>
+        <p class="job__co">深圳市麦凯莱科技有限公司（已倒闭）</p>
+        <ul class="job__sum">
+          <li>共创预热脚本并拍摄出片；参与批量起号的内容产出。</li>
+        </ul>
+        <details class="more" data-print-open>
+          <summary><span class="more__act">查看</span>日更节奏</summary>
+          <div class="more__b"><p>每天 2–3 场直播配 2–3 条预热视频，每周 2–3 条探店人设视频。</p></div>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="job__when">2020.07 — 2022.03</p>
+      <div class="job__main">
+        <h3 class="job__role">摄像师 + 剪辑师</h3>
+        <p class="job__co">深圳市西羽广告有限公司</p>
+        <ul class="job__sum">
+          <li>老板 IP 账号拍摄剪辑，稳定周更；活动片、抖店产品视频。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="early">
+      <div class="job">
+        <p class="job__when">2019.11 — 2020.06</p>
+        <div class="job__main">
+          <p class="job__role">新媒体运营</p>
+          <p class="job__co">深圳市极速网联通信有限公司</p>
+        </div>
+      </div>
+      <div class="job">
+        <p class="job__when">2019.01 — 2019.10</p>
+        <div class="job__main">
+          <p class="job__role">后期制作</p>
+          <p class="job__co">深圳灵极文化传播有限公司</p>
+        </div>
+      </div>
+      <div class="job">
+        <p class="job__when">空隙时间</p>
+        <div class="job__main">
+          <p class="job__role">自由摄影师</p>
+          <p class="job__co">个人</p>
+        </div>
+      </div>
+      <details class="more" data-print-open>
+        <summary><span class="more__act">查看</span>早期岗位内容</summary>
+        <div class="more__b">
+          <p><b>新媒体运营</b>　公众号内容编辑、头条视频制作、淘宝主图视频。</p>
+          <p><b>后期制作</b>　开课 PPT、音控与摄影、宣传片后期、公众号运营。</p>
+          <p><b>自由摄影师</b>　企业片、活动片拍摄剪辑。</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="edu">
+      <p class="edu__k">教育背景</p>
+      <p class="edu__v">2014 — 2018　湖南工程学院　<span>本科 · 纺织工程</span></p>
+    </div>
+  </section>
+
+  <!-- ============ 03 我的成果 ============ -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">我的成果</h2><span class="sec__num">03</span></div>
+
+    <div class="res">
+      <p class="res__k">99 台球</p>
+      <p class="res__v">两个月累计曝光 <b class="score">3000 万+</b><span class="res__note">团队累计</span></p>
+    </div>
+    <div class="res">
+      <p class="res__k">企业短视频矩阵</p>
+      <p class="res__v">累计 <b class="score">10+ 家企业</b>（汽车 / 激光装备 / 大健康 / 体育），单账号<b class="score">单月新增获客 500+</b><span class="res__note">单账号单月新增咨询</span></p>
+    </div>
+    <div class="res">
+      <p class="res__k">麦凯莱科技</p>
+      <p class="res__v">参与批量起号，最快 <b class="score">3 天涨粉 1 万</b>；自然流单条最高播放 <b class="score">6 万</b>；<span class="nb">单场 1 小时直播成交 <b class="score">17 万</b></span><span class="res__note">直播间口径</span></p>
+    </div>
+    <div class="res">
+      <p class="res__k">AI 教学</p>
+      <p class="res__v">累计学员 <b class="score">400+ 人</b><span class="res__note">四类课程，参与开发交付</span></p>
+    </div>
+  </section>
+
+  <!-- ============ 04 我的期望 ============ -->
+  <section class="sec">
+    <div class="sec__head"><h2 class="sec__title">我的期望</h2><span class="sec__num">04</span></div>
+    <div class="want">
+      <div class="want__item">
+        <p class="want__k">目标岗位</p>
+        <p class="want__v">AI 短剧编导<small>可兼账号策划、拍摄、成片</small></p>
+      </div>
+      <div class="want__item">
+        <p class="want__k">工作地点</p>
+        <p class="want__v">深圳</p>
+      </div>
+      <div class="want__item">
+        <p class="want__k">薪资期望</p>
+        <p class="want__v">12–15K</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  /* 头像降级：jpg → png → 收成单栏（无 JS 时仍显示 jpg） */
+  var img = document.querySelector('.hero__photo img');
+  if(img){
+    var chain = ['avatar.jpg','avatar.png'], i = 0;
+    img.addEventListener('error', function(){
+      i++;
+      if(i < chain.length){ img.src = chain[i]; return; }
+      var hero = img.closest('.hero');
+      if(hero){ hero.classList.add('no-photo'); }
+    });
+    img.addEventListener('load', function(){
+      var hero = img.closest('.hero');
+      if(hero){ hero.classList.remove('no-photo'); }
+    });
+  }
+
+  /* 打印：展开 data-print-open 的详情，打印后恢复原状态。
+     全部入口本身是原生 details，无 JS 时点击仍可开合。 */
+  var opened = [];
+  function openForPrint(){
+    opened = [];
+    document.querySelectorAll('details[data-print-open]').forEach(function(d){
+      if(!d.open){ d.open = true; opened.push(d); }
+    });
+  }
+  function restore(){
+    opened.forEach(function(d){ d.open = false; });
+    opened = [];
+  }
+  window.addEventListener('beforeprint', openForPrint);
+  window.addEventListener('afterprint', restore);
+
+  /* 打印 CSS 已隐藏 .more>summary，这里兜底：仅在打印时确保正文可见 */
+  var mqPrint = window.matchMedia ? window.matchMedia('print') : null;
+  if(mqPrint){
+    var onPrint = function(e){ e.matches ? openForPrint() : restore(); };
+    if(mqPrint.addEventListener){ mqPrint.addEventListener('change', onPrint); }
+    else if(mqPrint.addListener){ mqPrint.addListener(onPrint); }
+  }
+})();
+</script>
+
+<script id="editRuntime" data-edit-runtime="1">
+/* =========================================================
+   页面内编辑：文字直改 + 区块级排序 + 本地草稿 + 导出 HTML
+   无外部依赖；无 JS 时页面退化为普通静态简历。
+   导出/写回时整块移除（见 buildExportHTML），成品不留编辑能力。
+   ========================================================= */
+(function(){
+  'use strict';
+
+  var KEY = 'lizihan-resume-draft-v1';
+  var EXPORT_NAME = '李子涵_AI短剧编导简历_已编辑.html';
+  var doc       = document.querySelector('main.doc');
+  var heroText  = document.querySelector('.hero__text');
+  var bar       = document.getElementById('editbar');
+  var entry     = document.getElementById('editEntry');
+  var statusEl  = document.getElementById('editStatus');
+  var toastEl   = document.getElementById('editToast');
+
+  var editing = false, snap = null, dragState = null, dropTarget = null, toastTimer = null;
+  var stats = { accepted: 0, rejected: 0, lastReject: '' };
+
+  /* 可直接编辑的文字节点（叶子级，不破坏结构） */
+  var EDITABLE = [
+    '.hero__eyebrow', '.hero__name', '.hero__role', '.hero__pitch', '.contact li',
+    '.sec__title', '.line__k', '.abil__t', '.abil__d', '.ev__v', '.ev__b p',
+    '.chip>summary', '.chip__b',
+    '.job__when', '.job__role', '.job__co', '.job__sum li', '.more>summary', '.more__b p',
+    '.edu__v', '.res__k', '.res__v', '.want__k', '.want__v'
+  ].join(',');
+
+  var HANDLE_SVG = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">' +
+    '<circle cx="6" cy="4" r="1.2"/><circle cx="10" cy="4" r="1.2"/>' +
+    '<circle cx="6" cy="8" r="1.2"/><circle cx="10" cy="8" r="1.2"/>' +
+    '<circle cx="6" cy="12" r="1.2"/><circle cx="10" cy="12" r="1.2"/></svg>';
+  var ARROW_SVG = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>';
+
+  /* ---------- 可排序容器 ---------- */
+  function groups(){
+    var out = [];
+    if(doc){ out.push({ name: 'section', el: doc, sel: '.sec' }); }
+    Array.prototype.forEach.call(document.querySelectorAll('ul.abil'), function(ul){
+      out.push({ name: 'abil', el: ul, sel: '.abil__item' });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.doc > .sec'), function(sec){
+      var kids = Array.prototype.slice.call(sec.children);
+      var hasJob = kids.some(function(c){ return c.classList.contains('job') || c.classList.contains('early'); });
+      var hasRes = kids.some(function(c){ return c.classList.contains('res'); });
+      if(hasJob){ out.push({ name: 'job', el: sec, sel: '.job,.early' }); }
+      if(hasRes){ out.push({ name: 'res', el: sec, sel: '.res' }); }
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.early'), function(e){
+      out.push({ name: 'early', el: e, sel: '.job' });
+    });
+    return out;
+  }
+  function itemsOf(g){
+    return Array.prototype.filter.call(g.el.children, function(c){
+      return c.matches && c.matches(g.sel);
+    });
+  }
+  function oidNum(el){
+    var m = /(\d+)$/.exec(el.getAttribute('data-oid') || '');
+    return m ? parseInt(m[1], 10) : 0;
+  }
+  /* 首次运行给每个条目一个稳定编号，恢复默认顺序时按编号排 */
+  function ensureIds(){
+    groups().forEach(function(g){
+      itemsOf(g).forEach(function(el, i){
+        if(!el.getAttribute('data-oid')){ el.setAttribute('data-oid', g.name + '-' + (i + 1)); }
+      });
+    });
+  }
+  /* 只重排条目自身占据的位置，非条目子节点（栏目标题、续页页眉、教育背景）留在原位 */
+  function applyOrder(g, arr){
+    var kids = Array.prototype.slice.call(g.el.children);
+    var slots = [];
+    kids.forEach(function(el, i){ if(el.matches && el.matches(g.sel)){ slots.push(i); } });
+    var next = kids.slice();
+    slots.forEach(function(slot, i){ if(arr[i]){ next[slot] = arr[i]; } });
+    next.forEach(function(el){ g.el.appendChild(el); });
+  }
+  function locate(node){
+    if(!node || !node.closest){ return null; }
+    var el = node.closest('.sec,.abil__item,.job,.early,.res');
+    if(!el){ return null; }
+    var gs = groups();
+    for(var i = 0; i < gs.length; i++){
+      if(gs[i].el === el.parentElement && el.matches(gs[i].sel)){ return { g: gs[i], el: el }; }
+    }
+    return null;
+  }
+
+  /* ---------- 排序控件 ---------- */
+  var opsMap = new Map();
+  function hostFor(el){
+    /* 板块级手柄挂进标题行，避免落在地段末尾产生归属歧义 */
+    return el.classList.contains('sec') ? (el.querySelector(':scope > .sec__head') || el) : el;
+  }
+  function addOps(){
+    opsMap.clear();
+    groups().forEach(function(g){
+      itemsOf(g).forEach(function(el){
+        if(opsMap.has(el)){ return; }
+        var ops = document.createElement('div');
+        ops.className = 'edit-ops';
+        ops.innerHTML =
+          '<span class="ehandle" draggable="true" role="button" tabindex="0" aria-label="拖动排序">' + HANDLE_SVG + '</span>' +
+          '<button class="eop" type="button" data-op="up" aria-label="上移">上移</button>' +
+          '<button class="eop" type="button" data-op="down" aria-label="下移">下移</button>';
+        hostFor(el).appendChild(ops);
+        opsMap.set(el, ops);
+      });
+    });
+    refreshOps();
+  }
+  function removeOps(){
+    Array.prototype.forEach.call(document.querySelectorAll('.edit-ops'), function(n){ n.remove(); });
+    opsMap.clear();
+  }
+  function refreshOps(){
+    groups().forEach(function(g){
+      var arr = itemsOf(g);
+      arr.forEach(function(el, i){
+        var ops = opsMap.get(el);
+        if(!ops){ return; }
+        var up = ops.querySelector('[data-op="up"]'), down = ops.querySelector('[data-op="down"]');
+        if(up){ up.disabled = i === 0; }
+        if(down){ down.disabled = i === arr.length - 1; }
+      });
+    });
+  }
+
+  function moveItem(el, delta){
+    var loc = locate(el);
+    if(!loc){ return; }
+    var arr = itemsOf(loc.g);
+    var i = arr.indexOf(loc.el), j = i + delta;
+    if(i < 0 || j < 0 || j >= arr.length){ return; }
+    arr.splice(j, 0, arr.splice(i, 1)[0]);
+    applyOrder(loc.g, arr);
+    refreshOps();
+  }
+
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest && e.target.closest('.eop');
+    if(!btn || !editing){ return; }
+    e.preventDefault();
+    var item = btn.closest('.sec,.abil__item,.job,.early,.res');
+    if(item){ moveItem(item, btn.getAttribute('data-op') === 'up' ? -1 : 1); }
+  });
+
+  /* ---------- 拖拽（仅条目级，跨容器一律拒绝） ---------- */
+  function clearMarks(){
+    Array.prototype.forEach.call(document.querySelectorAll('.drop-before,.drop-after,.drop-bad'), function(n){
+      n.classList.remove('drop-before', 'drop-after', 'drop-bad');
+    });
+  }
+  document.addEventListener('dragstart', function(e){
+    if(!editing){ return; }
+    var h = e.target.closest && e.target.closest('.ehandle');
+    if(!h){ return; }
+    var loc = locate(h);
+    if(!loc){ e.preventDefault(); return; }
+    dragState = loc;
+    try{
+      e.dataTransfer.setData('text/plain', loc.el.getAttribute('data-oid') || 'item');
+      e.dataTransfer.effectAllowed = 'move';
+    }catch(err){}
+    loc.el.classList.add('drag-src');
+  });
+  document.addEventListener('dragover', function(e){
+    if(!editing || !dragState){ return; }
+    var t = locate(e.target);
+    clearMarks();
+    if(!t){
+      if(e.dataTransfer){ e.dataTransfer.dropEffect = 'none'; }
+      stats.rejected++; stats.lastReject = '非可排序区域';
+      return;
+    }
+    if(t.g.el !== dragState.g.el){
+      if(e.dataTransfer){ e.dataTransfer.dropEffect = 'none'; }
+      t.el.classList.add('drop-bad');
+      stats.rejected++; stats.lastReject = '跨容器（' + t.g.name + '）';
+      return;
+    }
+    if(t.el === dragState.el){
+      if(e.dataTransfer){ e.dataTransfer.dropEffect = 'none'; }
+      return;
+    }
+    e.preventDefault();
+    if(e.dataTransfer){ e.dataTransfer.dropEffect = 'move'; }
+    var r = t.el.getBoundingClientRect();
+    t.el.classList.add((e.clientY - r.top) < r.height / 2 ? 'drop-before' : 'drop-after');
+    dropTarget = t;
+  });
+  document.addEventListener('drop', function(e){
+    if(!editing || !dragState){ return; }
+    var t = locate(e.target);
+    var ok = t && t.g.el === dragState.g.el && t.el !== dragState.el;
+    e.preventDefault();
+    if(!ok){
+      stats.rejected++; stats.lastReject = '非法放置被拒绝';
+      clearMarks();
+      return;
+    }
+    var r = t.el.getBoundingClientRect();
+    var after = (e.clientY - r.top) > r.height / 2;
+    var arr = itemsOf(t.g);
+    var from = arr.indexOf(dragState.el);
+    if(from < 0){ return; }
+    arr.splice(from, 1);
+    var to = arr.indexOf(t.el);
+    arr.splice(after ? to + 1 : to, 0, dragState.el);
+    applyOrder(t.g, arr);
+    refreshOps();
+    stats.accepted++;
+    dragState.el.classList.remove('drag-src');
+    clearMarks();
+    dragState = null;
+  });
+  document.addEventListener('dragend', function(){
+    /* 任何收尾路径都要清掉拖拽痕迹，否则会被序列化进草稿/导出件 */
+    Array.prototype.forEach.call(document.querySelectorAll('.drag-src'), function(n){
+      n.classList.remove('drag-src');
+    });
+    dragState = null; dropTarget = null;
+    clearMarks();
+  });
+
+  /* ---------- 编辑态可编辑性 ---------- */
+  function setEditable(on){
+    Array.prototype.forEach.call(document.querySelectorAll(EDITABLE), function(el){
+      if(on){
+        el.setAttribute('contenteditable', 'true');
+        el.setAttribute('spellcheck', 'false');
+      }else{
+        el.removeAttribute('contenteditable');
+        el.removeAttribute('spellcheck');
+      }
+    });
+  }
+  /* 编辑态下点文字是改字，不是开合详情；开合交给专用按钮 */
+  document.addEventListener('click', function(e){
+    if(!editing){ return; }
+    if(e.target.closest && e.target.closest('.edit-toggle')){ return; }
+    if(e.target.closest && e.target.closest('summary') && e.target.closest('[contenteditable]')){
+      e.preventDefault();
+    }
+  }, true);
+
+  function addToggles(){
+    Array.prototype.forEach.call(document.querySelectorAll('details'), function(d){
+      var s = d.querySelector('summary');
+      if(!s || s.querySelector('.edit-toggle')){ return; }
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'edit-toggle';
+      b.setAttribute('aria-label', d.open ? '收起详情' : '展开详情');
+      b.innerHTML = ARROW_SVG;
+      b.addEventListener('click', function(ev){
+        ev.preventDefault(); ev.stopPropagation();
+        d.open = !d.open;
+        b.setAttribute('aria-label', d.open ? '收起详情' : '展开详情');
+      });
+      s.appendChild(b);
+    });
+  }
+  function removeToggles(){
+    Array.prototype.forEach.call(document.querySelectorAll('.edit-toggle'), function(n){ n.remove(); });
+  }
+  /* summary 内按回车只换行不入库，避免标签被拆成两行 */
+  document.addEventListener('keydown', function(e){
+    if(!editing){ return; }
+    if(e.key === 'Enter' && e.target.closest && e.target.closest('summary') && e.target.isContentEditable){
+      e.preventDefault();
+    }
+  });
+
+  /* ---------- 序列化 / 草稿 ---------- */
+  function cleanHTML(el){
+    var c = el.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll('[contenteditable]'), function(n){
+      n.removeAttribute('contenteditable'); n.removeAttribute('spellcheck');
+    });
+    Array.prototype.forEach.call(c.querySelectorAll('.edit-ops,.edit-toggle'), function(n){ n.remove(); });
+    Array.prototype.forEach.call(c.querySelectorAll('details[open]'), function(n){ n.removeAttribute('open'); });
+    Array.prototype.forEach.call(c.querySelectorAll('.drag-src,.drop-before,.drop-after,.drop-bad'), function(n){
+      n.classList.remove('drag-src', 'drop-before', 'drop-after', 'drop-bad');
+    });
+    return c.innerHTML;
+  }
+  /* 结构校验用真实解析，不依赖 class 字符串形态 */
+  function countSections(html){
+    var tpl = document.createElement('template');
+    tpl.innerHTML = html || '';
+    return tpl.content.querySelectorAll('.sec').length;
+  }
+  function snapshot(){
+    return { v: 1, ts: Date.now(), hero: cleanHTML(heroText), doc: cleanHTML(doc) };
+  }
+  function readDraft(){
+    try{ var s = localStorage.getItem(KEY); return s ? JSON.parse(s) : null; }catch(err){ return null; }
+  }
+  function writeDraft(d){
+    try{ localStorage.setItem(KEY, JSON.stringify(d)); return true; }catch(err){ return false; }
+  }
+  function clearDraftStore(){
+    try{ localStorage.removeItem(KEY); return true; }catch(err){ return false; }
+  }
+
+  function buildExportHTML(){
+    var root = document.documentElement.cloneNode(true);
+    var b = root.querySelector('body');
+    if(b){
+      b.classList.remove('editing');
+      /* 兜底：body 上任何残留的编辑态类名一并清掉 */
+      Array.prototype.forEach.call(b.classList, function(c){
+        if(/^(editing|is-editing|drag-active)/.test(c)){ b.classList.remove(c); }
+      });
+    }
+    /* 1. 编辑态属性 */
+    Array.prototype.forEach.call(root.querySelectorAll('[contenteditable]'), function(n){
+      n.removeAttribute('contenteditable'); n.removeAttribute('spellcheck');
+    });
+    /* 2. 编辑控件与提示节点 */
+    Array.prototype.forEach.call(root.querySelectorAll(
+      '#editbar,#editEntry,#editToast,#editStatus,.edit-ops,.edit-toggle,.ehandle,.dragghost'
+    ), function(n){ n.remove(); });
+    /* 3. 编辑运行时脚本（成品不再具备编辑能力） */
+    Array.prototype.forEach.call(root.querySelectorAll('script'), function(n){
+      var t = n.textContent || '';
+      if(n.id === 'editRuntime' || t.indexOf('lizihan-resume-draft-v1') > -1){ n.remove(); }
+    });
+    /* 4. 编辑态遗留属性与类 */
+    Array.prototype.forEach.call(root.querySelectorAll('[aria-expanded]'), function(n){
+      if(n.id === 'editEntry' || n.classList.contains('ebtn')){ n.setAttribute('aria-expanded','false'); }
+    });
+    Array.prototype.forEach.call(root.querySelectorAll('details[open]'), function(n){ n.removeAttribute('open'); });
+    Array.prototype.forEach.call(root.querySelectorAll('.drop-before,.drop-after,.drop-bad,.drag-src'), function(n){
+      n.classList.remove('drop-before', 'drop-after', 'drop-bad', 'drag-src');
+    });
+    return '<!DOCTYPE html>\n' + root.outerHTML;
+  }
+  function downloadHTML(html){
+    var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = EXPORT_NAME;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(url); a.remove(); }, 0);
+  }
+
+  /* ---------- 状态反馈 ---------- */
+  function fmt(ts){
+    var d = new Date(ts || Date.now());
+    var p = function(n){ return (n < 10 ? '0' : '') + n; };
+    return p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+  function setStatus(msg){ if(statusEl){ statusEl.textContent = msg || ''; } }
+  function toast(msg){
+    if(!toastEl){ return; }
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 4200);
+  }
+
+  /* ---------- 进入 / 退出 ---------- */
+  function enter(){
+    if(editing){ return; }
+    snap = { hero: heroText.innerHTML, doc: doc.innerHTML };
+    editing = true;
+    document.body.classList.add('editing');
+    setEditable(true);
+    addOps();
+    addToggles();
+    if(entry){ entry.setAttribute('aria-expanded', 'true'); }
+    var d = readDraft();
+    setStatus(d ? ('已载入本地草稿 · ' + fmt(d.ts)) : '点任意文字直接修改；拖动手柄或上移下移调整顺序');
+  }
+  function exit(){
+    editing = false;
+    document.body.classList.remove('editing');
+    setEditable(false);
+    removeOps();
+    removeToggles();
+    clearMarks();
+    if(entry){ entry.setAttribute('aria-expanded', 'false'); }
+    setStatus('');
+    snap = null;
+  }
+  function cancel(){
+    if(snap){
+      heroText.innerHTML = snap.hero;
+      doc.innerHTML = snap.doc;
+      ensureIds();
+    }
+    exit();
+    toast('已恢复到进入编辑前的内容');
+  }
+  function finish(){
+    var ok = writeDraft(snapshot());
+    exit();
+    toast(ok ? '已存入本地草稿，刷新后仍在' : '浏览器未允许本地草稿，请用「保存」导出文件');
+  }
+  function resetLayout(){
+    var changed = 0;
+    groups().forEach(function(g){
+      var arr = itemsOf(g);
+      if(arr.length < 2){ return; }
+      var sorted = arr.slice().sort(function(a, b){ return oidNum(a) - oidNum(b); });
+      var diff = sorted.some(function(el, i){ return el !== arr[i]; });
+      if(diff){ applyOrder(g, sorted); changed++; }
+    });
+    refreshOps();
+    setStatus(changed ? '已恢复默认区块顺序' : '顺序已是默认');
+    toast('已恢复默认区块顺序，文字内容未改动');
+  }
+
+  async function doSave(){
+    var d = snapshot();
+    var ok = writeDraft(d);
+    var html = buildExportHTML();
+
+    if(typeof window.showSaveFilePicker === 'function'){
+      try{
+        var handle = await window.showSaveFilePicker({
+          suggestedName: EXPORT_NAME,
+          types: [{ description: 'HTML 文件', accept: { 'text/html': ['.html'] } }]
+        });
+        var w = await handle.createWritable();
+        await w.write(new Blob([html], { type: 'text/html' }));
+        await w.close();
+        setStatus('已写回所选文件' + (ok ? ' · 草稿 ' + fmt(d.ts) : ''));
+        toast('已写入你选择的文件：' + handle.name);
+        return;
+      }catch(err){
+        if(err && err.name === 'AbortError'){
+          setStatus('已取消写回' + (ok ? ' · 草稿已存' : ''));
+          return;
+        }
+        /* 其余错误（含 file:// 下不可用）继续走下载 */
+      }
+    }
+    downloadHTML(html);
+    setStatus((ok ? '草稿已存 · ' : '') + '已导出 HTML');
+    toast('已导出 HTML 到下载目录。file:// 页面无法静默覆盖原文件，请自行替换。');
+  }
+
+  /* ---------- 初始化 ---------- */
+  ensureIds();
+
+  var draft = readDraft();
+  if(draft && draft.doc && draft.ts){
+    var curSec = countSections(doc.innerHTML);
+    var draftSec = countSections(draft.doc);
+    if(curSec === draftSec && draftSec > 0){
+      heroText.innerHTML = draft.hero || heroText.innerHTML;
+      doc.innerHTML = draft.doc;
+      ensureIds();
+    }
+  }
+
+  if(entry){ entry.addEventListener('click', enter); }
+  var btnSave = document.getElementById('btnSave');
+  var btnDone = document.getElementById('btnDone');
+  var btnCancel = document.getElementById('btnCancel');
+  var btnReset = document.getElementById('btnReset');
+  var btnClear = document.getElementById('btnClearDraft');
+  if(btnSave){ btnSave.addEventListener('click', doSave); }
+  if(btnDone){ btnDone.addEventListener('click', finish); }
+  if(btnCancel){ btnCancel.addEventListener('click', cancel); }
+  if(btnReset){ btnReset.addEventListener('click', resetLayout); }
+  if(btnClear){
+    btnClear.addEventListener('click', function(){
+      var ok = clearDraftStore();
+      setStatus(ok ? '本地草稿已清除' : '无法访问本地草稿');
+      toast(ok ? '本地草稿已清除，页面内容保持当前状态' : '浏览器不允许清除本地草稿');
+    });
+  }
+
+  /* 供验收使用：只读状态与计数 */
+  window.__resumeEdit = {
+    isEditing: function(){ return editing; },
+    stats: function(){ return { accepted: stats.accepted, rejected: stats.rejected, lastReject: stats.lastReject }; },
+    groups: function(){ return groups().map(function(g){ return { name: g.name, count: itemsOf(g).length }; }); },
+    order: function(){
+      var out = {};
+      groups().forEach(function(g){
+        out[g.name] = out[g.name] || [];
+        out[g.name].push(itemsOf(g).map(function(el){
+          return (el.querySelector('.sec__title,.job__role,.res__k,.abil__t,.line__k') || {}).textContent || el.getAttribute('data-oid');
+        }));
+      });
+      return out;
+    },
+    setEditable: function(on){ setEditable(on); },
+    clearDraft: clearDraftStore
+  };
+})();
+</script>
+
+</body>
+</html>
